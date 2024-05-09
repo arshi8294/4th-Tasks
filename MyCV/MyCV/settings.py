@@ -55,7 +55,7 @@ ROOT_URLCONF = 'MyCV.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'cv/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
