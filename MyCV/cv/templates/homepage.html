@@ -31,6 +31,19 @@
             <h2>Education</h2>
             <p>{{ i.education }}</p>
         </div>
+        
+        <div class="contact">
+            <table>
+                <tr>
+                    <th>E-Mail:</th>
+                    <th>Phone number:</th>
+                </tr>
+                <tr>
+                    <td> {{ i.email }}</td>
+                    <td> {{ i.phone_number }}</td>
+                </tr>
+            </table>
+        </div>
     {% endfor %}
 
 {% endblock %}
