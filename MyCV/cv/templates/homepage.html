@@ -1,33 +1,36 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="{% static "homepage.css" %}">
-    <meta charset="UTF-8">
-    <title>Arshia Amoozad-main page</title>
-</head>
-{% for i in profiles %}
-<body>
-    <div class="Title">
-        <h1>{{ i.name }}</h1>
-        <h2>Biography</h2>
-        <p>{{ i.summary }}</p>
-    </div>
 
-    <div class="skills">
-        <h2>Skills</h2>
-        <p>{{ i.skills|linebreaksbr }}</p>
-    </div>
+{% block Title %}
+	Profile
+{% endblock %}
+{% block link %}
+	rel="stylesheet" href="{% static "homepage.css" %}"
+{% endblock %}
 
-    <div class="experience">
-        <h2>Experience</h2>
-        <p>{{ i.experience }}</p>
-    </div>
+{% block body %}
+	
+    {% for i in profiles %}
+        <div class="Title">
+            <h1>{{ i.name }}</h1>
+            <h2>Biography</h2>
+            <p>{{ i.summary }}</p>
+        </div>
+    
+        <div class="skills">
+            <h2>Skills</h2>
+            <p>{{ i.skills|linebreaksbr }}</p>
+        </div>
+    
+        <div class="experience">
+            <h2>Experience</h2>
+            <p>{{ i.experience }}</p>
+        </div>
+    
+        <div class="education">
+            <h2>Education</h2>
+            <p>{{ i.education }}</p>
+        </div>
+    {% endfor %}
 
-    <div class="education">
-        <h2>Education</h2>
-        <p>{{ i.education }}</p>
-    </div>
-</body>
-{% endfor %}
-</html>
+{% endblock %}
