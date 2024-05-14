@@ -16,23 +16,23 @@
             <h2>Biography</h2>
             <p>{{ i.summary }}</p>
         </div>
-    
-        <div class="skills">
-            <h2>Skills</h2>
-            <p>{{ i.skills|linebreaksbr }}</p>
-        </div>
-    
-        <div class="experience">
-            <h2>Experience</h2>
-            <p>{{ i.experience }}</p>
-        </div>
-    
-        <div class="education">
-            <h2>Education</h2>
-            <p>{{ i.education }}</p>
+
+        <div>
+            <table class="second-section">
+                <tr>
+                    <th>Skills</th>
+                    <th>Experience</th>
+                    <th>Education</th>
+                </tr>
+                <tr>
+                    <td>{{ i.skills | linebreaksbr }}</td>
+                    <td>{{ i.experience }}</td>
+                    <td>{{ i.education }}</td>
+                </tr>
+            </table>
         </div>
         
-        <div class="contact">
+        <div class="third-section">
             <table>
                 <tr>
                     <th>E-Mail:</th>
